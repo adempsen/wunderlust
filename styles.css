@@ -52,3 +52,432 @@ table {
 }
 
 /* END CSS RESET */
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+/* font-family: 'Molle', cursive;
+font-family: 'Montserrat', sans-serif; */
+
+:root {
+--yellow: #F6D64A;
+--teal: #55BCD5;
+--purple: #9B26B0;
+--blue: #499BD2;
+--dark-gray: #222222;
+--light-gray: #EAEAEA;
+--white: #FFFFFF;
+--black: #000000;
+font-weight: normal;
+font-size: 1rem;
+}
+
+/* Font Styles */
+h1, h2, h3 {
+	font-family: 'Molle', cursive;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h4, p, q, small, nav, button, form {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	min-width: 320px;
+	width: 100vw;
+	
+}
+
+/* skip-link */
+
+#skip {
+	position: absolute;
+	left: -1000px;
+}
+
+
+.sr-only {
+	visibility: hidden;
+}
+
+header {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr;
+width: 100%;
+background: linear-gradient(var(--blue), var(--white)) ;
+padding: 25px;
+min-width: 320px;
+}
+header img {
+	grid-column: 1 / 2;
+}
+ 
+#title-sub {
+grid-column: 1 / -1;
+grid-row: 2;
+z-index: 2;
+margin: auto;
+padding: 10px;
+text-align: center;
+}
+
+#menu-toggle {
+	grid-column: 3/ 4;
+}
+header h1, header p {
+	text-align: center;
+}
+
+#menu-toggle ul {
+	height: 0px;
+	overflow: hidden;
+	-webkit-transition: height 0.3s ease-out;
+}
+
+#menu-toggle input[type="checkbox"] {
+display: none;
+}
+
+#menu-toggle label {
+	background-color: var(--yellow);
+	padding: 15px;
+	border-radius: 5%;
+}
+
+#menu-toggle label:hover {
+	background-color: var(--white);
+	border: 2px solid black;
+}
+
+#menu-toggle input:checked ~ ul {
+height: 200px;
+overflow: visible;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+padding-top: 25px;
+z-index: 10;
+width: 100vw;
+background-color: var(--white);
+text-align: center;
+position: relative;
+left: -230px;
+}
+
+#menu-toggle ul a {
+	text-decoration: none;
+	color: var(--black);
+	
+}
+
+#menu-toggle a:hover {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 15px;
+	cursor: pointer;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+#main-content {
+	display: flex;
+	gap: 2px;
+	flex-wrap: wrap;
+	min-width: 320px;
+	align-content: center;
+}
+
+#intro {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	padding: 5px;
+	margin: 5px;
+	width: 100vw;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+#plan {
+	background-color: var(--yellow);
+	width: 100%;
+}
+
+#plan h3 {
+	text-align: center;
+}
+
+#plan section {
+	background-color: var(--blue);
+	border: 2px solid var(--white);
+	border-radius: 5%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+
+
+
+}
+
+#plan img {
+	width: 50%;
+
+}
+
+#testimonials {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#testimonials h4 {
+	font-family:  'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#about {
+	background-color: var(--blue);
+	width: 100vw;
+	
+}
+#about img{
+	width: 50%;
+
+}
+
+#about-icons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#contact label {
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+}
+#contact input {
+	border: 2px solid var(--purple);
+	padding: 10px;
+}
+.required {
+	color: var(--purple);
+}
+
+#names {
+	display: flex;
+	flex-direction: column;
+}
+
+fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+fieldset legend {
+	font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+  appearance: none;
+  color: var(--purple);
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--purple);
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+background-color: var(--purple);
+}
+
+
+#contact select {
+	background-color: var(--white);
+	border: 2px solid var(--purple);
+	padding: 15px;
+	width: 100vw;
+}
+
+input[type="submit"] {
+	background-color: var(--purple);
+	color: var(--white);
+}
+
+footer {
+	background-color: var(--light-gray);
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 5em;
+
+}
+
+footer a {
+	text-decoration: none;
+	color: black;
+}
+ #footer-links {
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: space-between;
+ }
+
+@media screen and (min-width: 450px) {
+	#menu-toggle ul {
+		overflow: visible;
+		display: flex;
+		position: absolute;
+		top: 240px;
+		left: 25px;
+		justify-content: space-evenly;
+		justify-items: flex-start;
+		gap: 10px;
+		
+	}
+
+	#menu-toggle ul li a {
+		background-color: var(--yellow);
+		padding: 10px;
+		
+	}
+
+	#menu-toggle label {
+		visibility: hidden;
+		
+	}
+
+	#img-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 15px;
+	}
+#plan-icons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 5px;
+}
+
+	#test-icons {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#about-icons {
+		display: flex;
+
+	}
+
+	#contact fieldset {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#prefs {
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width:600px) {
+	#menu-toggle ul {
+		position: absolute;
+		top: 2px;
+		right: 0px;
+	}
+
+	#main-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	#intro {
+		grid-column: 1/ 2;
+	
+	}
+
+	#img-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column: 2;
+		width: 100%;
+	}
+
+	#plan-icons {
+		display: flex;
+	}
+
+	#test-icons {
+		display: flex;
+		text-align: center;
+	}
+
+	#about-icons {
+		display: flex;
+		justify-content: center;
+		justify-items: space-between;
+	
+		text-align: center;
+	}
+
+	#contact {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10px;
+
+	}
+
+	#contact h3 {
+		grid-column: 1/ -1;
+	}
+
+	#names {
+		width: 33%;
+		grid-column: 1/ 2;
+		grid-row: 2;
+	}
+
+	#nums {
+		display: flex;
+		flex-direction: column;
+		width: 33%;
+		grid-column: 2/ 3;
+		grid-row: 2;
+	}
+
+	.custom-select {
+		display: flex;
+		width: 33%;
+		grid-column: 3/ 4;
+	}
+	
+
+	footer {
+		display: flex;
+		justify-content: space-around;
+		padding-top: 10px;
+	}
+}

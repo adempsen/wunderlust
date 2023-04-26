@@ -37,8 +37,8 @@
         <!-- styling skip links: https://webaim.org/techniques/css/invisiblecontent/ -->
         <header>
             <a href="index.html" id="logo"><img src="images/logo.png" alt="The Wunderlust logo shows blue waves and the outline of two palm trees against an orange sun"></a>
-            <h1>Wunderlust</h1>
-			<p>Let Wunderlust Travel help you plan the trip of your dreams!</p>			
+            <div id="title-sub"><h1>Wunderlust</h1>
+			<p>Let Wunderlust Travel help you plan the trip of your dreams!</p></div>			
             <nav>
                 <div id="menu-toggle">
                     <!-- responsive menu code from (with changes made to match mockups): https://css-tricks.com/three-css-alternatives-to-javascript-navigation/ -->
@@ -72,7 +72,7 @@
                 </div>  
                 <section id="plan">
                     <h3>Plan Your Trip</h3>
-                    <div>
+                    <div id="plan-icons">
                         <section>
                             <h4>How to Get There</h4>
                             <a href="#" title="Search for flights">
@@ -101,7 +101,7 @@
                 </section>
                 <section id="testimonials">
                     <h3>Testimonials</h3>
-                    <div>
+                    <div id="test-icons">
                         <section>
                             <img src="images/miranda-blake.png" alt="Miranda Blake has a blonde bob and is wearing dark sunglasses">
                             <h4>Amanda Blake</h4>
@@ -130,7 +130,7 @@
                 </section>
                 <section id="about">
                     <h3>About Your Destination</h3>
-                    <div>
+                    <div id="about-icons">
                         <section>
                             <img src="images/size.svg" alt="ruler icon">
                             <h4>Size</h4> 
@@ -231,8 +231,8 @@
         </main>
         <footer>
             <p>Copyright &copy; 2021 Wunderlust Travel</p>
-            <a href="#">Privacy Statement</a>
-            <a href="#">Terms of Service</a>
+            <div id="footer-links"><a href="#">Privacy Statement</a>
+            <a href="#">Terms of Service</a></div>
         </footer>
     </body>
 </html>
